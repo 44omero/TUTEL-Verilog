@@ -1,0 +1,25 @@
+`timescale 1ns / 1ps
+
+module hw4_q1_tb;
+    reg clk=1,rst;
+    reg [63:0] inA;
+    reg [63:0] inB;
+    wire [127:0] out;
+
+    hw4_q1 dut (.rst(rst),.inA(inA), .inB(inB), .out(out), .clk(clk));
+    
+always begin
+    clk = ~clk;
+    #10;
+end
+
+initial begin
+    #1 rst <= 1;
+    #1   rst <= 0;
+    #1
+    inA = 64'hffffffffffffffff;
+    inB = 64'hffffffffffffffff;
+    #1000
+    $finish;
+end
+endmodule
