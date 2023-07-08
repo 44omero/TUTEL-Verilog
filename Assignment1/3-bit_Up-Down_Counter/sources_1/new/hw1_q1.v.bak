@@ -1,0 +1,25 @@
+`timescale 1ns / 1ps
+
+module hw1_q1(
+    input clk, rst, x,
+    output reg [3:0] counter = 0
+    );
+    
+always @(posedge(clk)) begin
+    if (rst)
+        counter <= 0;
+    else 
+        if (x)
+            if (counter == 7)
+                counter <= 0;
+            else
+                counter <= counter+1;
+        else
+            if (counter == 0)
+                counter <= 7;
+            else
+                counter <= counter-1;
+        
+end
+
+endmodule
