@@ -17,8 +17,8 @@ The projects in this repository are primarily for educational purposes. They are
 
 Browse through the directories to find different projects and their respective Verilog source files.
 
-##How to Contribute
+## How to Contribute
 Currently, this repository is not open for contributions as it mainly serves as a personal archive of assignments. However, you are encouraged to fork the repository and experiment with the Verilog codes to suit your educational needs.
 
-##License
+## License
 This project is not under any specific license and is available for educational and informational use.
